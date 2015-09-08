@@ -14,6 +14,9 @@
 		CB9543D81B9769D2009B7409 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB9543D71B9769D2009B7409 /* Images.xcassets */; };
 		CB9543DB1B9769D2009B7409 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB9543D91B9769D2009B7409 /* LaunchScreen.xib */; };
 		CB9543E71B9769D2009B7409 /* BubbleAnimationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9543E61B9769D2009B7409 /* BubbleAnimationTests.m */; };
+		CB9543F31B976C6A009B7409 /* BubbleInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9543F21B976C6A009B7409 /* BubbleInfo.m */; };
+		CB9543F61B976CF3009B7409 /* BubbleConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9543F51B976CF3009B7409 /* BubbleConfig.m */; };
+		CBD52F4A1B9F530700FD0E1E /* BubbleAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD52F491B9F530700FD0E1E /* BubbleAnimationView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,12 @@
 		CB9543E01B9769D2009B7409 /* BubbleAnimationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BubbleAnimationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB9543E51B9769D2009B7409 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB9543E61B9769D2009B7409 /* BubbleAnimationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BubbleAnimationTests.m; sourceTree = "<group>"; };
+		CB9543F11B976C6A009B7409 /* BubbleInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BubbleInfo.h; sourceTree = "<group>"; };
+		CB9543F21B976C6A009B7409 /* BubbleInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BubbleInfo.m; sourceTree = "<group>"; };
+		CB9543F41B976CF3009B7409 /* BubbleConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BubbleConfig.h; sourceTree = "<group>"; };
+		CB9543F51B976CF3009B7409 /* BubbleConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BubbleConfig.m; sourceTree = "<group>"; };
+		CBD52F481B9F530700FD0E1E /* BubbleAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BubbleAnimationView.h; sourceTree = "<group>"; };
+		CBD52F491B9F530700FD0E1E /* BubbleAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BubbleAnimationView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +90,7 @@
 		CB9543C91B9769D2009B7409 /* BubbleAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				CB9543F01B976C4E009B7409 /* Bubble */,
 				CB9543CE1B9769D2009B7409 /* AppDelegate.h */,
 				CB9543CF1B9769D2009B7409 /* AppDelegate.m */,
 				CB9543D11B9769D2009B7409 /* ViewController.h */,
@@ -117,6 +127,19 @@
 				CB9543E51B9769D2009B7409 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CB9543F01B976C4E009B7409 /* Bubble */ = {
+			isa = PBXGroup;
+			children = (
+				CB9543F11B976C6A009B7409 /* BubbleInfo.h */,
+				CB9543F21B976C6A009B7409 /* BubbleInfo.m */,
+				CB9543F41B976CF3009B7409 /* BubbleConfig.h */,
+				CB9543F51B976CF3009B7409 /* BubbleConfig.m */,
+				CBD52F481B9F530700FD0E1E /* BubbleAnimationView.h */,
+				CBD52F491B9F530700FD0E1E /* BubbleAnimationView.m */,
+			);
+			path = Bubble;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,8 +243,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB9543D31B9769D2009B7409 /* ViewController.m in Sources */,
+				CBD52F4A1B9F530700FD0E1E /* BubbleAnimationView.m in Sources */,
+				CB9543F61B976CF3009B7409 /* BubbleConfig.m in Sources */,
 				CB9543D01B9769D2009B7409 /* AppDelegate.m in Sources */,
 				CB9543CD1B9769D2009B7409 /* main.m in Sources */,
+				CB9543F31B976C6A009B7409 /* BubbleInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +442,7 @@
 				CB9543EC1B9769D2009B7409 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CB9543ED1B9769D2009B7409 /* Build configuration list for PBXNativeTarget "BubbleAnimationTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +451,7 @@
 				CB9543EF1B9769D2009B7409 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
