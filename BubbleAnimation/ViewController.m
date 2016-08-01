@@ -11,6 +11,10 @@
 
 @interface ViewController ()
 
+@property (nonatomic, strong) BubbleAnimationView *bubbleAnimationView;
+
+- (IBAction)startButtonPressed:(UIBarButtonItem *)sender;
+
 @end
 
 @implementation ViewController
@@ -18,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    [self addBuubleAnimationView];
+    //[self performSelector:@selector(addBuubleAnimationView) withObject:nil afterDelay:10.0];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,9 +35,19 @@
 
 - (void)addBuubleAnimationView
 {
-    BubbleAnimationView *bubbleAnimationView = [[BubbleAnimationView alloc] initWithFrame:self.view.frame];
-    [self.view addSubview:bubbleAnimationView];
-    [bubbleAnimationView animateBuubleViews];
+    [self.bubbleAnimationView removeFromSuperview];
+    self.bubbleAnimationView = nil;
+    
+    self.bubbleAnimationView = [[BubbleAnimationView alloc] initWithFrame:self.view.frame];
+    [self.view addSubview:self.bubbleAnimationView];
+    [self.bubbleAnimationView animateBuubleViews];
+}
+
+#pragma mark
+#pragma mark IBAction
+
+- (IBAction)startButtonPressed:(UIBarButtonItem *)sender {
+    [self addBuubleAnimationView];
 }
 
 @end
